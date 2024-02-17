@@ -14,7 +14,6 @@ export function Cervezas({nombre, url, brewed}) {
       <CardMedia
         component="img"
         alt="green iguana"
-        height="140"
         image={url}
       />
       <CardContent>

@@ -2,7 +2,7 @@ import React from "react";
 import { Cervezas } from './Cervezas';
 import { useState } from "react";
 import { useEffect } from "react";
-export const BeerGrid = () => {
+export const BeerGrid = ({cerveza}) => {
 
     const [cervezas, setCervezas] = useState([]);
 
