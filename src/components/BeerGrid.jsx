@@ -18,6 +18,7 @@ export const BeerGrid = () => {
           id: cerveza.id,
           name: cerveza.name,
           url: cerveza.image_url,
+          brewed: cerveza.first_brewed
         }));
 
         setCervezas(cervezas);
@@ -25,9 +26,10 @@ export const BeerGrid = () => {
   }, []);
 
   return <>
-        {cervezas.map(({id, nombre, url}) => {
-            <Cervezas id={id} nombre={nombre} url={url}/>
-        }
+
+        {cervezas.map(({id, name, url, brewed}) => (
+            <Cervezas key={id} nombre={name} url={url} brewed={brewed}/>
+        )
         
         )}
   </>;

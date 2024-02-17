@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export function Cervezas({id, name, url}) {
+export function Cervezas({nombre, url, brewed}) {
 
     
   return (
@@ -19,10 +19,10 @@ export function Cervezas({id, name, url}) {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {id}
+          {nombre}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {name}
+          First brewed in {brewed}
         </Typography>
       </CardContent>
       <CardActions>
