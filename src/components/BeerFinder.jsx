@@ -1,14 +1,17 @@
 import React from "react";
 import { useState } from "react";
 
-export const BeerFinder = ({ onFindCerveza }) => {
+export const BeerFinder = ({ onFiltrarCervezas }) => {
 
   const [inputValue, setInputValue] = useState("");
 
   const onChangeInput = ({ target }) => {
+    
     setInputValue(target.value);
-    onFindCerveza(inputValue);
+   onFiltrarCervezas(target.value);
   };
+
+ 
 
   return (
     <>
