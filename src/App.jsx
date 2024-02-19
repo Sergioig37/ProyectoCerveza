@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 function App() {
+  
   const [cervezas, setCervezas] = useState([]);
   const [cervezasMostrar, setCervezasMostrar] = useState([]);
 

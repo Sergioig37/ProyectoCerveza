@@ -1,19 +1,15 @@
 import React from "react";
 import { Cerveza } from "./Cerveza";
-import { useState } from "react";
-import { useEffect } from "react";
+import Grid from "@mui/material/Grid";
 
 export const BeerGrid = ({ cervezas }) => {
-
-    
-
   return (
     <>
-      <div style={{ display: "flex" }}>
+      <Grid container spacing={1}>
         {cervezas.map(({ id, name, url, brewed }) => (
           <Cerveza key={id} nombre={name} url={url} brewed={brewed} />
         ))}
-      </div>
+      </Grid>
     </>
   );
 };

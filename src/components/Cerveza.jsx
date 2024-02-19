@@ -1,23 +1,32 @@
-import * as React from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
 
-export function Cerveza({nombre, url, brewed}) {
-
-  
-    
+export function Cerveza({ nombre, url, brewed }) {
   return (
     <>
-      <div style={{margin: "20px"}}>
-        <div>
-          <img src={url} alt="" style={{maxHeight: "200px", maxWidth: "200px"}}/>
-        </div>
-        <div>
-          <h2>{nombre}</h2>
-          <p>Brewed in { brewed }</p>
-        </div>
-      </div>
+      <Grid item xs="auto">
+        <Card sx={{ maxWidth: 200 }}>
+          <CardMedia component="img" alt="green iguana" image={url} />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {nombre}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              First brewed in {brewed}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">Share</Button>
+            <Button size="small">Learn More</Button>
+          </CardActions>
+        </Card>
+      </Grid>
     </>
- 
   );
 }
