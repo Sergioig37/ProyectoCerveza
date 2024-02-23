@@ -20,7 +20,6 @@ function App() {
           url: cerveza.image_url,
           brewed: cerveza.first_brewed,
         }));
-
         setCervezas(cervezas);
         setCervezasMostrar(cervezas)
       });
